@@ -1,12 +1,77 @@
-# React + Vite
+# React To-Do List
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A simple and clean React To-Do List application built using Vite and styled with Tailwind CSS. This app allows users to add, remove, and mark tasks as completed, along with optional filtering, sorting, theme toggling, and persistent localStorage integration.
 
-Currently, two official plugins are available:
+## 🚀 Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+* Add new tasks with input validation
+* Remove tasks
+* Mark tasks as completed
+* Filter by All / Active / Completed
+* Sort tasks alphabetically (A-Z / Z-A)
+* Light and dark theme toggle with preference persistence
+* Local storage support for saving tasks and theme
 
-## Expanding the ESLint configuration
+## 🛠 Tech Stack
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+* React (via Vite)
+* Tailwind CSS
+* Headless UI (for theme switch)
+* Lucide React (for icons)
+
+## 📦 Installation
+
+```bash
+npm install
+npm run dev
+```
+
+Make sure you’ve installed these dependencies:
+
+```bash
+npm install @headlessui/react lucide-react
+npm install -D tailwindcss postcss autoprefixer
+npx tailwindcss init -p
+```
+
+## ✅ Testing Guidance
+
+1. **Add Task**
+   Type a task and press `Enter` or click **Add**. The task should appear below.
+
+2. **Validate Input**
+   Try entering an empty or whitespace-only task. It should not be added.
+
+3. **Mark as Completed**
+   Use the checkbox to mark a task as done. It should be styled with a line-through.
+
+4. **Remove Task**
+   Click **Remove** to delete a task from the list.
+
+5. **Sort Tasks**
+   Use the sort button to arrange tasks A-Z or Z-A.
+
+6. **Filter Tasks**
+   Use the filter dropdown to show All / Active / Completed tasks.
+
+7. **Theme Toggle**
+   Switch between Light and Dark themes using the toggle in the header.
+
+8. **Persistence**
+   Reload the page. Tasks and theme preference should persist via localStorage.
+
+## 📁 Folder Structure
+
+```
+├── public
+│   └── index.html
+├── src
+│   ├── App.jsx
+│   └── main.jsx
+├── tailwind.config.js
+└── README.md
+```
+
+## 📄 License
+
+This project is licensed under the MIT License.
